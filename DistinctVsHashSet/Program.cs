@@ -1,6 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,14 +10,6 @@ namespace DistinctVsHashSet
         public static void Main(string[] args)
         {
             BenchmarkRunner.Run(typeof(Program).Assembly);
-
-            //Console.WriteLine(Utility.ListWithDuplicates().Count());
-
-            //Console.WriteLine(Utility.ListWithDuplicates().Distinct().Count());
-
-            //Console.WriteLine(new HashSet<int>(Utility.ListWithDuplicates()).Count());
-
-            Console.ReadKey();
         }
 
         [MemoryDiagnoser]
